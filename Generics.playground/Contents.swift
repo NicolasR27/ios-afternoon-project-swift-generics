@@ -55,4 +55,37 @@ struct CountedSet<Element: Hashable> {
     }
 }
 
- 
+ var testSet = CountedSet<Double>()
+
+ testSet.insert(2.1)
+testSet.insert(2.1)
+testSet.insert(4)
+print(testSet[2.1])
+print(testSet)
+testSet.remove(2.1)
+print(testSet)
+testSet.count
+testSet.isEmpty
+testSet.insert(5.3)
+
+ for _ in 0...109 {
+    testSet.insert(4.8)
+}
+testSet[4.8]
+for _ in 0...100 {
+    testSet.remove(4)
+}
+testSet
+var otherTestSet: CountedSet = ["hi", "hello", "howdy", "hi", "hi"]
+otherTestSet.insert("hi")
+otherTestSet["hi"]
+
+ enum Arrow { case iron, wooden, elven, dwarvish, magic, silver }
+var aCountedSet = CountedSet<Arrow>()
+aCountedSet[.iron] // 0
+var myCountedSet: CountedSet<Arrow> = [.iron, .magic, .iron, .silver, .iron, .iron]
+myCountedSet[.iron] // 4
+myCountedSet.remove(.iron) // 3
+myCountedSet.remove(.dwarvish) // 0
+myCountedSet.remove(.magic) // 0
+print(myCountedSet.contains(.dwarvish))
