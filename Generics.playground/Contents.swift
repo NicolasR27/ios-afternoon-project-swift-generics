@@ -57,7 +57,7 @@ struct CountedSet<Element: Hashable> {
 
  var testSet = CountedSet<Double>()
 
- testSet.insert(2.1)
+testSet.insert(2.1)
 testSet.insert(2.1)
 testSet.insert(4)
 print(testSet[2.1])
@@ -76,9 +76,9 @@ for _ in 0...100 {
     testSet.remove(4)
 }
 testSet
-var otherTestSet: CountedSet = ["hi", "hello", "howdy", "hi", "hi"]
-otherTestSet.insert("hi")
-otherTestSet["hi"]
+var otherTestSet: CountedSet = ["yo", "hello", "hey", "yo", "yo"]
+otherTestSet.insert("yo")
+otherTestSet["yo"]
 
  enum Arrow { case iron, wooden, elven, dwarvish, magic, silver }
 var aCountedSet = CountedSet<Arrow>()
